@@ -15,7 +15,7 @@ async function getMovie() {
     console.log("getting the movies...");
     let movieSearch = searchBar.value
     // let movieSearch = "titanic"
-    const res = await fetch(`http://www.omdbapi.com/?apikey=5990ed13&s=${movieSearch}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=5990ed13&s=${movieSearch}`)
     const data = await res.json()
     // console.log(data.Response);
     console.log(data);
