@@ -16,7 +16,7 @@ async function getWatchlist() {
         </div>`
         }
     for (myMovie of allStorage()) {
-    const movieRes = await fetch(`http://www.omdbapi.com/?apikey=5990ed13&t=${myMovie}`)
+    const movieRes = await fetch(`https://www.omdbapi.com/?apikey=5990ed13&t=${myMovie}`)
     const movieData = await movieRes.json()
 
     movieHtml += `
