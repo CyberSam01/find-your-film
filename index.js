@@ -21,7 +21,7 @@ async function getMovie() {
     console.log(data);
     for (movie of data.Search) {
             modal.style.display = "flex";
-            const movieRes = await fetch(`http://www.omdbapi.com/?apikey=5990ed13&t=${movie.Title}`)
+            const movieRes = await fetch(`https://www.omdbapi.com/?apikey=5990ed13&t=${movie.Title}`)
             const movieData = await movieRes.json()
             movieHtml += `
                 <div id="img-txt-container">
