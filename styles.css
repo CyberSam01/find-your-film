@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    background-color: #1c1c1c;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+button:hover, input:hover{
+    cursor: pointer;
+}
+
+.fontAwesome {
+    font-family: "inter", "fontAwesome", sans-serif;
+}
+
+#line {
+    border-bottom: 1px solid #DFDDDD;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+header, #movie-container, #search-div, #modal {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 50%;
+}
+
+header {
+    background-color:#1c1c1c;
+    background-image: url("image 36.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    height: 28vh;
+}
+
+#header-btn {
+    color: white;
+    background-color: transparent;
+    font-size: 1.4rem;
+    margin-top: 1em;
+    border: none;
+}
+
+#search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+    background-color: white;
+}
+
+#search-bar {
+    font-size: 1.3rem;
+    width: 50%;
+    float: left;
+    border-radius: 5px 0 0 5px;
+    padding: .7em 1em;
+    border: 1px solid gainsboro;
+    margin-top: -3vh;
+}
+
+#search-btn { 
+    font-size: 1.3rem;
+    width: 15%;
+    border-radius: 0 5px 5px 0;
+    padding: .7em 1em;
+    background-color: #f9fafb;
+    border: 1px solid gainsboro;
+    border-left: none;
+    margin-top: -3vh;
+    color: #636262;
+}
+
+.watchlist-btn {
+    background-color: white;
+    border: none;
+    font-size: 1.3rem;
+}
+
+#intro-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #DFDDDD;
+    height: 70vh;
+}
+
+#intro-div > i {
+    font-size: 7.5rem;
+}
+
+
+#img-txt-container, #title-container, #genre-container{
+    display: flex;
+    /* border: 1px solid mediumvioletred; */
+}
+
+#img-txt-container {
+    padding: .5em 5em 2em 1.5em;
+}
+
+#img-txt-container > img {
+    width: 25%;
+    height: auto;
+    margin-right: 2em;
+    margin-top: 1em;
+}
+
+#title-container {
+    font-size: 1.5rem;
+}
+
+#title > a {
+    color: #444444;
+    text-decoration: none;
+}
+
+#rating-container {
+    display: flex;
+    /* border: 1px solid mediumvioletred; */
+}
+
+.rating {
+    color:#444444;
+    padding-top: .3em;
+}
+
+#star {
+    color: #fec654;
+    padding: 1.7em .5em 0 1.5em;
+}
+
+#genre-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+#genre-container > h4 {
+    margin: 0 0 1em 0;
+}
+
+.watchlist-btn {
+    font-size: 1.2rem;
+}
+
+
+/* MODAL */
+#modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 450px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #636262; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.3s linear infinite;
+
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* MOBILE */
+@media (max-width:500px) {
+    header, #movie-container, #search-div, #modal {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.6rem;
+        font-weight: 600;
+        max-width: 3em;
+    }
+
+    h5 {
+        margin: 1em 0 1em 0;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 0 0 1em 0;
+    }
+
+    #header-btn {
+        margin-bottom: .7em;
+    }
+
+    /* SEARCHBAR */
+    #search-div {
+        padding-bottom: 2em;
+    }
+
+    #search-bar {
+        font-size: 1.15rem;
+        width: 60%;
+        float: left;
+        border-radius: 5px 0 0 5px;
+        padding: .7em 1em;
+        border: 1px solid gainsboro;
+        margin-top: -2vh;
+    }
+    
+    #search-btn { 
+        font-size: 1.16rem;
+        width: 25%;
+        border-radius: 0 5px 5px 0;
+        padding: .7em 1em;
+        background-color: #f9fafb;
+        border: 1px solid gainsboro;
+        border-left: none;
+        margin-top: -2vh;
+        color: #636262;
+    }
+
+    #intro-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        color: #DFDDDD;
+        height: 70vh;
+        padding-bottom: 11em;
+        margin-top: -1em;
+    }
+    
+    #intro-div > i {
+        font-size: 6rem;
+    }
+
+    #img-txt-container, #title-container, #genre-container{
+        display: flex;
+        margin-top: -.1em;
+        /* border: 1px solid mediumvioletred; */
+    }
+    
+    #img-txt-container {
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        /* border: 1px solid mediumvioletred; */
+    }
+    
+    #img-txt-container > img {
+        object-fit:scale-down;
+        width: 40%;
+        height: auto;
+        margin: 0 1em 0 0;
+    }
+
+    #txt-container {
+        padding-right: .5em;
+    }
+    
+    #title-container {
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 1.2rem;
+    }
+    
+    #title > a {
+        color: #444444;
+        text-decoration: none;
+    }
+
+    
+    #rating-container {
+        display: flex;
+        /* border: 1px solid mediumvioletred; */
+    }
+    
+    .rating {
+        color:#444444;
+        padding-top: .2em;
+        font-size: 1rem;
+    }
+    
+    #star {
+        color: #fec654;
+        padding: 1.3em .2em 0 .5em;
+        /* padding: 1.7em .5em 0 1.5em; */
+    }
+    
+    #genre-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+    
+    #genre-container > h4 {
+        margin: 0;
+    }
+    
+    .watchlist-btn {
+        font-size: 1rem;
+    }
+
+    #modal {
+        padding-top: 360px;
+    }
+}
+
